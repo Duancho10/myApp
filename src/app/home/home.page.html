@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+     {{variable}}
+    </ion-toolbar>
+  </ion-header>
+
+  <form>
+    <div id= "container" >
+      <label for="exampleInputEmail1">Number 1</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="variable">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">NUmber 2</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="variable2">
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div id="container">
+     Valor 1:
+    <input type="number" name= "" id="" [(ngModel)]= "variable" />
+    <br/>
+     <span style="color: red"> Valor 2: </span>  
+     <input type="number" name= "" id="" [(ngModel)]= "variable2" />
+     <strong   *ngIf=" "variable > 10" >    Variable>10</strong>
+    <p></p>
+    {{ 'El resultado de la operacion es = ' + resultado }}
+
+    <button type="button" class="btn btn-outline-info" (click)="sumar()">sumar</button>
+    <button type="button" class="btn btn-outline-dark"(click)="multiplicar()" >multiplicar</button>
+    <button type="button" class="btn btn-outline-secondary"(click)="dividir()">dividir</button>
+    <button type="button" class="btn btn-outline-primary"(click)="restar()" >restar</button>
+  </div>
+
+<button type= "button" [routerLink] = "'/perfil'" class = "btn btn-outline-primary" >Ir Perfil </button>
+</ion-content>
