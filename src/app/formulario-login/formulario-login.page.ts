@@ -9,8 +9,9 @@ export class FormularioLoginPage implements OnInit {
 
   constructor() { }
 
-  Password= 123456;
-
+  Password= "";
+  passwordfalse= ;
+  passwordtrue= 123456;
 
   ngOnInit() {
   }
